@@ -1,0 +1,61 @@
+name: minecraft_server_status
+description: Minecraft server status.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+  bloc_concurrency: ^0.2.1
+  equatable: ^2.0.5
+  stream_transform: ^2.1.0
+
+  http: ^0.13.5
+
+  animated_text_kit: ^4.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  bloc_test: ^9.1.1
+
+  flutter_lints: ^2.0.1
+
+  flutter_launcher_icons: ^0.12.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/default_skin.png
+
+  fonts:
+    - family: PressStart2P
+      fonts:
+        - asset: assets/fonts/PressStart2P.ttf
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/icon/icon.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/icon/icon.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/icon/icon.png"
