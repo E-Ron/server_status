@@ -69189,7 +69189,7 @@ vU(){var s=0,r=A.V(t.cS),q,p
 var $async$vU=A.W(function(a,b){if(a===1)return A.S(b,r)
 while(true)switch(s){case 0:A.ph("object")
 s=3
-return A.a_(A.aI0(A.aF_("https","api.mcstatus.io","v2/status/java/95.79.237.200",null)),$async$vU)
+return A.a_(A.aI0(A.aF_("https","api.mcstatus.io","v2/status/java/95.79.196.70",null)),$async$vU)
 case 3:p=b
 if(p.b===200){A.ph("object1")
 q=A.aCZ(t.a.a(B.aE.d1(0,A.aHH(A.aFt(p.e).c.a.i(0,"charset")).d1(0,p.w))))
