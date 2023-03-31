@@ -1,9 +1,10 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:minecraft_server_status/server_status/bloc/server_status_bloc.dart';
-import 'package:minecraft_server_status/server_status/models/server_status.dart';
-import 'package:minecraft_server_status/server_status/widgets/fetch_wrapper.dart';
+
+import '../bloc/server_status_bloc.dart';
+import '../models/server_status.dart';
+import 'fetch_wrapper.dart';
 
 class ServerStatusAction extends StatelessWidget {
   const ServerStatusAction({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class ServerStatusAction extends StatelessWidget {
               case OnlineStatus.online:
                 return FetchWrapper(
                   text: '${state.serverStatus.playersOnline} в сети',
-                  color: Colors.lightGreenAccent,
+                  color: Colors.greenAccent,
                 );
               case OnlineStatus.offline:
                 return const FetchWrapper(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:minecraft_server_status/server_status/bloc/server_status_bloc.dart';
+
+import '../bloc/server_status_bloc.dart';
 
 class FetchWrapper extends StatelessWidget {
   const FetchWrapper({

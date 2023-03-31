@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:minecraft_server_status/server_status/widgets/server_status_action.dart';
+
+import '../widgets/server_status_action.dart';
 
 class StatusAppBar extends StatelessWidget implements PreferredSizeWidget {
   const StatusAppBar({Key? key}) : super(key: key);
@@ -7,12 +8,13 @@ class StatusAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.lightBlueAccent.shade100,
       title: const Text(
         'Статус сервера',
-        style: TextStyle(fontSize: 16),
+        style: TextStyle(fontSize: 14),
       ),
-      actions: const [ServerStatusAction()],
+      actions: const [
+        ServerStatusAction(),
+      ],
     );
   }
 

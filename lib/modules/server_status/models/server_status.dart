@@ -1,4 +1,4 @@
-import 'package:minecraft_server_status/server_status/models/player.dart';
+import 'package:minecraft_server_status/models/player.dart';
 
 enum OnlineStatus { online, offline, undefine }
 
