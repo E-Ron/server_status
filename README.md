@@ -1,9 +1,8 @@
 # Minecraft server status
  
 ### Deployment
-```
 https://limitedasm.github.io/minecraft_server_status
-```
+
 
 ### Hot-reloads for development
 ```
