@@ -46,9 +46,15 @@ class AppTheme {
   AppTheme.dark() : this(mode: AppThemeMode.dark);
 
   static Future<AppTheme> fromStorage() async {
-    ThemePreferences themePreferences = ThemePreferences();
-    final font = await themePreferences.getFontType();
-    final mode = await themePreferences.getThemeMode();
+    ThemePreferences themePreferences = ThemePreferences(
+      prefs: SharedPreferences.getInstance(),
+    );
+    late final AppFontType font;
+    late final AppThemeMode mode;
+    await Future.wait([
+      themePreferences.getFontType().then((value) => font = value),
+      themePreferences.getThemeMode().then((value) => mode = value),
+    ]);
     return AppTheme(mode: mode, font: font);
   }
 
