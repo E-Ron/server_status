@@ -5,7 +5,7 @@ import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:stream_transform/stream_transform.dart';
 
 import '../models/server_status.dart';
-import 'sever_status_repository_impl.dart';
+import '../repository/sever_status_repository.dart';
 
 part 'server_status_event.dart';
 part 'server_status_state.dart';

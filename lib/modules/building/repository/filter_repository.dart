@@ -1,18 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../models/owner.dart';
+import '../models/owner.dart';
 
-class FilterRepositoryImpl implements FilterRepository {
+class FilterRepository {
   FilterService service = FilterService();
 
-  @override
   Future<List<Owner>> retrieveFilterData() {
     return service.retrieveFilterData();
   }
-}
-
-abstract class FilterRepository {
-  Future<List<Owner>> retrieveFilterData();
 }
 
 class FilterService {

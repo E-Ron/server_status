@@ -54,17 +54,17 @@ class _NavigationScreenState extends State<NavigationScreen> {
       providers: [
         BlocProvider(
           create: (_) => ServerStatusBloc(
-            ServerStatusRepositoryImpl(),
+            ServerStatusRepository(),
           )..add(ServerStatusFetched()),
         ),
         BlocProvider(
           create: (_) => BuildingBloc(
-            BuildingRepositoryImpl(),
+            BuildingRepository(),
           ),
         ),
         BlocProvider(
           create: (_) => FilterBloc(
-            FilterRepositoryImpl(),
+            FilterRepository(),
           ),
         ),
       ],

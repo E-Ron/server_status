@@ -3,29 +3,20 @@ import 'package:minecraft_server_status/modules/building/models/building.dart';
 import 'package:minecraft_server_status/modules/building/models/building_filter.dart';
 import 'package:minecraft_server_status/modules/building/models/owner.dart';
 
-class BuildingRepositoryImpl implements BuildingRepository {
+class BuildingRepository {
   BuildingService service = BuildingService();
 
-  @override
   Future<List<Building>> retrieveBuildingData() {
     return service.retrieveBuildingData();
   }
 
-  @override
   Future<BuildingFilter> retrieveFilterData() {
     return service.retrieveFilterData();
   }
 
-  @override
   Future<List<Building>> retrieveFilteredBuildingData(BuildingFilter filter) {
     return service.retrieveFilteredBuildingData(filter);
   }
-}
-
-abstract class BuildingRepository {
-  Future<List<Building>> retrieveBuildingData();
-  Future<BuildingFilter> retrieveFilterData();
-  Future<List<Building>> retrieveFilteredBuildingData(BuildingFilter filter);
 }
 
 class BuildingService {
@@ -50,7 +41,6 @@ class BuildingService {
 
   Future<List<Building>> retrieveFilteredBuildingData(
       BuildingFilter filter) async {
-    print(1);
     final CollectionReference collection = _db.collection('buildings');
     late final Query filteredCollection;
     if (filter.selectedOwner.type == SelectedType.any) {

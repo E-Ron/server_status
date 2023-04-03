@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/building_filter.dart';
 import '../../models/owner.dart';
-import 'filter_repository_impl.dart';
+import '../../repository/filter_repository.dart';
 
 part 'filter_event.dart';
 part 'filter_state.dart';

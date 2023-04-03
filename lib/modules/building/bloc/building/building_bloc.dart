@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 
 import '../../models/building.dart';
 import '../../models/building_filter.dart';
-import 'building_repository_impl.dart';
+import '../../repository/building_repository.dart';
 
 part 'building_event.dart';
 part 'building_state.dart';
