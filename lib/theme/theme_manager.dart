@@ -22,6 +22,7 @@ class ThemeManager with ChangeNotifier {
 
   setThemeFont(AppFontType font) async {
     _theme._font = font;
+    _preferences.setFontType(font);
     notifyListeners();
   }
 }
