@@ -12,6 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
   bloc: ^8.1.1
   flutter_bloc: ^8.1.2
   equatable: ^2.0.5
@@ -39,6 +43,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  generate: true
 
   assets:
     - assets/images/default_skin.png
@@ -68,3 +74,6 @@ flutter_icons:
   macos:
     generate: true
     image_path: "assets/icon/icon.png"
+
+flutter_intl:
+  enabled: true

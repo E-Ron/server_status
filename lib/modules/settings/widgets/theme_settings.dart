@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:minecraft_server_status/theme/theme_manager.dart';
 
@@ -15,7 +16,10 @@ class _ThemeSettingsState extends State<ThemeSettings> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text('Тема '),
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: Text(AppLocalizations.of(context)!.theme),
+        ),
         ..._buildThemeVariantList(),
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../widgets/server_status_action.dart';
 
@@ -8,9 +9,9 @@ class StatusAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(
-        'Статус сервера',
-        style: TextStyle(fontSize: 14),
+      title: Text(
+        AppLocalizations.of(context)!.serverStatus,
+        style: const TextStyle(fontSize: 14),
       ),
       actions: const [
         ServerStatusAction(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../bloc/server_status_bloc.dart';
 import '../models/server_status.dart';
@@ -17,14 +18,16 @@ class ServerStatusAction extends StatelessWidget {
           case ServerFetchStatus.loading:
             return Row(
               children: [
-                const Text('Загрузка'),
+                Text(AppLocalizations.of(context)!.loading),
                 SizedBox(
                   width: 43,
                   child: AnimatedTextKit(
                     repeatForever: true,
                     animatedTexts: [
-                      TyperAnimatedText('...',
-                          speed: const Duration(seconds: 1)),
+                      TyperAnimatedText(
+                        '...',
+                        speed: const Duration(seconds: 1),
+                      ),
                     ],
                   ),
                 ),
@@ -34,23 +37,25 @@ class ServerStatusAction extends StatelessWidget {
             switch (state.serverStatus.onlineStatus) {
               case OnlineStatus.online:
                 return FetchWrapper(
-                  text: '${state.serverStatus.playersOnline} в сети',
+                  text: AppLocalizations.of(context)!.onlineCounter(
+                    state.serverStatus.playersOnline,
+                  ),
                   color: Colors.greenAccent,
                 );
               case OnlineStatus.offline:
-                return const FetchWrapper(
-                  text: 'Не в сети',
+                return FetchWrapper(
+                  text: AppLocalizations.of(context)!.offline,
                   color: Colors.redAccent,
                 );
               case OnlineStatus.undefine:
-                return const FetchWrapper(
-                  text: 'Сервер недоступен',
+                return FetchWrapper(
+                  text: AppLocalizations.of(context)!.serverUnavailable,
                   color: Colors.grey,
                 );
             }
           case ServerFetchStatus.failure:
-            return const FetchWrapper(
-              text: 'Ошибка',
+            return FetchWrapper(
+              text: AppLocalizations.of(context)!.error,
               color: Colors.redAccent,
             );
           //TODO add different error for server disabled and user havent internet

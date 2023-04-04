@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'modules/building/building.dart';
 import 'modules/server_status/server_status.dart';
@@ -28,20 +29,23 @@ class _NavigationScreenState extends State<NavigationScreen> {
     SettingsAppBar(),
   ];
 
-  static const List<BottomNavigationBarItem> _bottomNavigationBarItems = [
-    BottomNavigationBarItem(
-      icon: Icon(Icons.supervisor_account),
-      label: 'В сети',
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.business),
-      label: 'Постройки',
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.settings),
-      label: 'Настройки',
-    ),
-  ];
+  static List<BottomNavigationBarItem> _buildBottomNavigationBarItems(
+      BuildContext context) {
+    return [
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.supervisor_account),
+        label: AppLocalizations.of(context)!.online,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.business),
+        label: AppLocalizations.of(context)!.buildings,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.settings),
+        label: AppLocalizations.of(context)!.settings,
+      ),
+    ];
+  }
 
   void _onItemTapped(int index) {
     setState(() {
@@ -73,7 +77,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         appBar: _appBarOptions.elementAt(_selectedIndex),
         body: _bodyOptions.elementAt(_selectedIndex),
         bottomNavigationBar: BottomNavigationBar(
-          items: _bottomNavigationBarItems,
+          items: _buildBottomNavigationBarItems(context),
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
         ),

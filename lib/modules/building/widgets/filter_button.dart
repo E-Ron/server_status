@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../bloc/building/building_bloc.dart';
 import '../bloc/filter/filter_bloc.dart';
@@ -19,9 +20,9 @@ class _FilterButtonState extends State<FilterButton> {
     return BlocBuilder<FilterBloc, FilterState>(builder: (context, state) {
       if (state is FilterInitial) {
         context.read<FilterBloc>().add(const OwnersFetched());
-        return const TextButton(
+        return TextButton(
           onPressed: null,
-          child: Text('Фильтр'),
+          child: Text(AppLocalizations.of(context)!.filter),
         );
       } else if (state is FilterSuccess) {
         return TextButton(
@@ -49,12 +50,10 @@ class _FilterButtonState extends State<FilterButton> {
               return null;
             });
           },
-          child: const Text('Фильтр'),
+          child: Text(AppLocalizations.of(context)!.filter),
         );
       } else {
-        return SizedBox(
-          child: Text('${state.runtimeType}'),
-        );
+        return const SizedBox();
       }
     });
   }

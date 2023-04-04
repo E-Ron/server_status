@@ -17,3 +17,7 @@ runs:
     - name: Get dependencies
       shell: bash
       run: flutter pub get
+
+    - name: Generate internalization
+      shell: bash
+      run: flutter gen-l10n

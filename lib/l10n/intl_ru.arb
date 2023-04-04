@@ -1,0 +1,35 @@
+{
+  "online": "В сети",
+  "buildings": "Постройки",
+  "settings": "Настройки",
+  "theme": "Тема",
+  "font": "Шрифт",
+  "pixel": "Пиксельный",
+  "classic": "Классический",
+  "loading": "Загрузка",
+  "offline": "Не в сети",
+  "onlineCounter": "{online} в сети",
+  "@onlineCounter": {
+    "placeholders": {
+      "online": {
+        "type": "int",
+        "example": "0"
+      }
+    }
+  },
+  "serverUnavailable": "Сервер недоступен",
+  "error": "Ошибка",
+  "playersListEmpty": "Никого нет на сервере...",
+  "playersListError": "Не удалось получить\nсписок игроков.",
+  "noOwner": "Нет владельцев",
+  "anyOwner": "Любой владелец",
+  "owner": "Владелец",
+  "cancel": "Отменить",
+  "ok": "Применить",
+  "serverStatus": "Статус сервера",
+  "filter": "Фильтр",
+  "buildingListEmpty": "Список построек пуст.",
+  "buildingListError": "Не удалось получить\nсписок построек.",
+  "buildingList": "Список построек"
+
+}

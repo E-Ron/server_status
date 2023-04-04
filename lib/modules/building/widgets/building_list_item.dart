@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../models/building.dart';
 import '../models/owner.dart';
@@ -21,7 +22,7 @@ class BuildingListItem extends StatelessWidget {
         children: [
           _buildBuildingName(),
           _buildCoordinates(),
-          _buildOwners(),
+          _buildOwners(context),
         ],
       ),
     );
@@ -97,12 +98,12 @@ class BuildingListItem extends StatelessWidget {
     );
   }
 
-  Widget _buildOwners() {
+  Widget _buildOwners(BuildContext context) {
     String formatOwners(List<Owner> owners) {
       if (owners.isNotEmpty) {
         return owners.reduce((value, element) => '$value $element');
       } else {
-        return 'Нет владельца';
+        return AppLocalizations.of(context)!.noOwner;
       }
     }
 

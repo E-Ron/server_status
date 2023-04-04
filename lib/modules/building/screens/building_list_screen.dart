@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:minecraft_server_status/widgets/loading_animation.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../bloc/building/building_bloc.dart';
 import '../widgets/building_list.dart';
@@ -17,9 +18,9 @@ class BuildingListScreen extends StatelessWidget {
           return const LoadingAnimation();
         } else if (state is BuildingSuccess) {
           if (state.buildingList.isEmpty) {
-            return const Center(
+            return Center(
               child: Text(
-                'Список построек пуст.',
+                AppLocalizations.of(context)!.buildingListEmpty,
               ),
             );
           } else {
@@ -28,9 +29,9 @@ class BuildingListScreen extends StatelessWidget {
             );
           }
         } else {
-          return const Center(
+          return Center(
             child: Text(
-              'Не удалось получить\nсписок построек.',
+              AppLocalizations.of(context)!.buildingListError,
             ),
           );
         }

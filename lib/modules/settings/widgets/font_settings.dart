@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:minecraft_server_status/theme/theme_manager.dart';
 
@@ -15,7 +16,10 @@ class _FontSettingsState extends State<FontSettings> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text('Шрифт '),
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: Text(AppLocalizations.of(context)!.font),
+        ),
         ..._buildFontVariantList(),
       ],
     );
@@ -50,19 +54,19 @@ class FontVariant extends StatelessWidget {
               : () {
                   themeNotifier.setThemeFont(fontType);
                 },
-          child: _buildFontWidget(fontType),
+          child: _buildFontWidget(fontType, context),
         );
       }),
     );
   }
 }
 
-Widget _buildFontWidget(AppFontType fontType) {
+Widget _buildFontWidget(AppFontType fontType, BuildContext context) {
   late Widget fontWidget;
   switch (fontType) {
     case AppFontType.pixel:
       fontWidget = Text(
-        'Пиксельный',
+        AppLocalizations.of(context)!.pixel,
         style: TextStyle(
           fontFamily: getFontFamily(fontType),
           fontSize: AppTheme.defaultFontSize(fontType),
@@ -71,7 +75,7 @@ Widget _buildFontWidget(AppFontType fontType) {
       break;
     case AppFontType.classic:
       fontWidget = Text(
-        'Классический',
+        AppLocalizations.of(context)!.classic,
         style: TextStyle(
           fontFamily: getFontFamily(fontType),
           fontSize: AppTheme.defaultFontSize(fontType),

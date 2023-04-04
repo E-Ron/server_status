@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../widgets/filter_button.dart';
 
@@ -9,9 +10,9 @@ class BuildingListAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(
-        'Список построек',
-        style: TextStyle(fontSize: 16),
+      title: Text(
+        AppLocalizations.of(context)!.buildingList,
+        style: const TextStyle(fontSize: 16),
       ),
       actions: const [
         FilterButton(),

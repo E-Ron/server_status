@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../models/building_filter.dart';
 import '../models/owner.dart';
@@ -15,6 +16,8 @@ class FilterDialog extends StatefulWidget {
 }
 
 class _FilterDialogState extends State<FilterDialog> {
+  static const fontSize = TextStyle(fontSize: 10);
+
   late List<String> owners;
   late String currentOwner;
   late bool isAnyOwner;
@@ -28,8 +31,9 @@ class _FilterDialogState extends State<FilterDialog> {
       currentOwner = widget.buildingFilter.selectedOwner.owner ?? owners[0];
       hasOwners = true;
     } else {
-      owners = ['Нет владельцев'];
-      currentOwner = 'Нет владельцев';
+      final String noOwner = AppLocalizations.of(context)!.noOwner;
+      owners = [noOwner];
+      currentOwner = noOwner;
       hasOwners = false;
       isAnyOwner = true;
     }
@@ -65,9 +69,9 @@ class _FilterDialogState extends State<FilterDialog> {
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          const Text(
-            'Любой владелец',
-            style: TextStyle(fontSize: 10),
+          Text(
+            AppLocalizations.of(context)!.anyOwner,
+            style: fontSize,
           ),
           Checkbox(
             value: isAnyOwner,
@@ -89,9 +93,9 @@ class _FilterDialogState extends State<FilterDialog> {
   Widget _buildCurrentOwnerSelector() {
     return Row(
       children: [
-        const Text(
-          'Владелец',
-          style: TextStyle(fontSize: 10),
+        Text(
+          AppLocalizations.of(context)!.owner,
+          style: fontSize,
         ),
         const SizedBox(width: 10),
         DropdownButton(
@@ -101,7 +105,7 @@ class _FilterDialogState extends State<FilterDialog> {
                     value: name,
                     child: Text(
                       name,
-                      style: const TextStyle(fontSize: 10),
+                      style: fontSize,
                     ),
                     onTap: () {
                       setState(() {
@@ -121,9 +125,9 @@ class _FilterDialogState extends State<FilterDialog> {
       onPressed: () {
         Navigator.of(context).pop();
       },
-      child: const Text(
-        'Отменить',
-        style: TextStyle(fontSize: 10),
+      child: Text(
+        AppLocalizations.of(context)!.cancel,
+        style: fontSize,
       ),
     );
   }
@@ -140,9 +144,9 @@ class _FilterDialogState extends State<FilterDialog> {
         );
         Navigator.of(context).pop(selectedOwner);
       },
-      child: const Text(
-        'Применить',
-        style: TextStyle(fontSize: 10),
+      child: Text(
+        AppLocalizations.of(context)!.ok,
+        style: fontSize,
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:minecraft_server_status/widgets/loading_animation.dart';
 import '../bloc/server_status_bloc.dart';
@@ -16,18 +17,18 @@ class PlayersListScreen extends StatelessWidget {
         case ServerFetchStatus.loading:
           return const LoadingAnimation();
         case ServerFetchStatus.failure:
-          return const Center(
+          return Center(
             child: Text(
-              'Не удалось получить\nсписок игроков.',
+              AppLocalizations.of(context)!.playersListError,
               textAlign: TextAlign.center,
-              style: TextStyle(height: 2),
+              style: const TextStyle(height: 2),
             ),
           );
         case ServerFetchStatus.success:
           final players = state.serverStatus.players;
           if (players.isEmpty) {
-            return const Center(
-              child: Text('Никого нет на сервере...'),
+            return Center(
+              child: Text(AppLocalizations.of(context)!.playersListEmpty),
             );
           } else {
             return RefreshIndicator(
