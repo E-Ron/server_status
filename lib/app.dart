@@ -16,6 +16,7 @@ class App extends StatelessWidget {
       child: Consumer<ThemeManager>(
         builder: (context, themeNotifier, child) {
           return MaterialApp(
+            title: 'Minecraft server status',
             theme: themeNotifier.theme.themeData,
             // darkTheme: darkTheme,
             // themeMode: themeNotifier.themeData,
