@@ -18,8 +18,6 @@ class App extends StatelessWidget {
           return MaterialApp(
             title: 'Minecraft server status',
             theme: themeNotifier.theme.themeData,
-            // darkTheme: darkTheme,
-            // themeMode: themeNotifier.themeData,
             home: const NavigationScreen(),
           );
         },
