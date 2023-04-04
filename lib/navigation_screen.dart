@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:http/http.dart' as http;
 
 import 'modules/building/building.dart';
 import 'modules/server_status/server_status.dart';
@@ -54,7 +55,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
       providers: [
         BlocProvider(
           create: (_) => ServerStatusBloc(
-            ServerStatusRepository(),
+            ServerStatusRepository(client: http.Client()),
           )..add(ServerStatusFetched()),
         ),
         BlocProvider(

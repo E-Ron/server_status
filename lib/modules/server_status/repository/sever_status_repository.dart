@@ -4,7 +4,10 @@ import 'package:http/http.dart' as http;
 import '../models/server_status.dart';
 
 class ServerStatusRepository {
-  ServerStatusService service = ServerStatusService();
+  ServerStatusRepository({required http.Client client})
+      : service = ServerStatusService(client: client);
+
+  final ServerStatusService service;
 
   Future<ServerStatus> retrieveServerStatus() {
     return service.retrieveServerStatus();
@@ -12,15 +15,21 @@ class ServerStatusRepository {
 }
 
 class ServerStatusService {
+  ServerStatusService({required this.client});
+
+  final http.Client client;
+
   static const _statusBaseUrl = 'api.mcstatus.io';
   static const _statusMethodPath = 'v2/status/java/';
   static const _minecraftServerIp =
       String.fromEnvironment('MINECRAFT_SERVER_IP');
 
+  static Uri get serviceUri {
+    return Uri.https(_statusBaseUrl, '$_statusMethodPath$_minecraftServerIp');
+  }
+
   Future<ServerStatus> retrieveServerStatus() async {
-    final response = await http.get(
-      Uri.https(_statusBaseUrl, '$_statusMethodPath$_minecraftServerIp'),
-    );
+    final response = await client.get(serviceUri);
     if (response.statusCode == 200) {
       final body = json.decode(response.body) as Map<String, dynamic>;
       return ServerStatus.fromJson(body);
