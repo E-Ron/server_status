@@ -1,5 +1,4 @@
 name: Web Release
-description: Build and deploy web release on github pages
 
 on:
   push:
