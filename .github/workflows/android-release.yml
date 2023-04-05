@@ -1,4 +1,5 @@
 name: Android Release
+description: Build android release apk
 
 on:
   push:
@@ -13,15 +14,15 @@ jobs:
     name: Create Android Build
     runs-on: ubuntu-latest
     steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3
+
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
           distribution: "zulu"
           java-version: "12.x"
           cache: "gradle"
-
-      - name: Git Checkout
-        uses: actions/checkout@v3
 
       - name: Flutter Initial
         uses: ./.github/actions/flutter_init

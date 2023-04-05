@@ -1,5 +1,6 @@
-name: flutter_init
-description: Initialize Flutter Project
+name: Flutter Initial
+description: Initialize flutter project
+
 runs:
   using: composite
   steps:
