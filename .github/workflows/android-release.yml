@@ -2,23 +2,24 @@ name: Android Release
 
 on:
   push:
-    branches: [ 'master' ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ 'master' ]
+    branches: [ "master" ]
 
   workflow_dispatch:
 
 jobs:
   build:
+    name: Create Android Build
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Git Checkout
+        uses: actions/checkout@v3
 
-      - name: Flutter init
+      - name: Flutter Initial
         uses: ./.github/actions/flutter_init
 
-      - name: Start release build
+      - name: Start Android Release Build
         run: flutter build apk --release --dart-define=MINECRAFT_SERVER_IP=${{ vars.MINECRAFT_SERVER_IP }}
 
       - name: Upload Android Build Files

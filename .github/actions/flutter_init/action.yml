@@ -1,23 +1,26 @@
 name: flutter_init
-description: Initialize flutter project
+description: Initialize Flutter Project
 runs:
   using: composite
   steps:
-    - uses: actions/setup-java@v3
+    - name: Setup Java
+      uses: actions/setup-java@v3
       with:
-        distribution: 'zulu'
-        java-version: '12.x'
-        cache: 'gradle'
-    - uses: subosito/flutter-action@v2
+        distribution: "zulu"
+        java-version: "12.x"
+        cache: "gradle"
+
+    - name: Setup Flutter Environment
+      uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.7.6'
-        channel: 'stable'
+        flutter-version: "3.7.6"
+        channel: "stable"
         cache: true
 
-    - name: Get dependencies
+    - name: Get Flutter Dependencies
       shell: bash
       run: flutter pub get
 
-    - name: Generate internalization
+    - name: Generate Internalization
       shell: bash
       run: flutter gen-l10n
