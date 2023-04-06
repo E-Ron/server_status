@@ -6,8 +6,8 @@ import 'package:minecraft_server_status/widgets/loading_animation.dart';
 import '../bloc/server_status_bloc.dart';
 import '../widgets/players_list.dart';
 
-class PlayersListScreen extends StatelessWidget {
-  const PlayersListScreen({super.key});
+class ServerStatusScreen extends StatelessWidget {
+  const ServerStatusScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,20 +25,7 @@ class PlayersListScreen extends StatelessWidget {
             ),
           );
         case ServerFetchStatus.success:
-          final players = state.serverStatus.players;
-          if (players.isEmpty) {
-            return Center(
-              child: Text(AppLocalizations.of(context)!.playersListEmpty),
-            );
-          } else {
-            return RefreshIndicator(
-              strokeWidth: 2,
-              onRefresh: () async {
-                context.read<ServerStatusBloc>().add(ServerStatusFetched());
-              },
-              child: PlayersList(players: players),
-            );
-          }
+          return PlayersList(players: state.serverStatus.players);
       }
     });
   }
