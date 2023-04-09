@@ -52,8 +52,8 @@ class AppTheme {
     late final AppFontType font;
     late final AppThemeMode mode;
     await Future.wait([
-      themePreferences.getFontType().then((value) => font = value),
-      themePreferences.getThemeMode().then((value) => mode = value),
+      themePreferences.fetchFontType().then((value) => font = value),
+      themePreferences.fetchThemeMode().then((value) => mode = value),
     ]);
     return AppTheme(mode: mode, font: font);
   }
@@ -76,8 +76,8 @@ class AppTheme {
   ThemeData _getLightTheme() {
     return ThemeData(
       useMaterial3: true,
-      fontFamily: getFontFamily(font),
-      textTheme: getTextTheme(font),
+      fontFamily: fontFamily(font),
+      textTheme: textTheme(font),
       brightness: Brightness.light,
     );
   }
@@ -85,14 +85,14 @@ class AppTheme {
   ThemeData _getDarkTheme() {
     return ThemeData(
       useMaterial3: true,
-      fontFamily: getFontFamily(font),
-      textTheme: getTextTheme(font),
+      fontFamily: fontFamily(font),
+      textTheme: textTheme(font),
       brightness: Brightness.dark,
     );
   }
 }
 
-TextTheme getTextTheme(AppFontType font) {
+TextTheme textTheme(AppFontType font) {
   late TextTheme textTheme;
   switch (font) {
     case AppFontType.pixel:
@@ -105,7 +105,7 @@ TextTheme getTextTheme(AppFontType font) {
   return textTheme;
 }
 
-String getFontFamily(AppFontType font) {
+String fontFamily(AppFontType font) {
   late String fontFamily;
   switch (font) {
     case AppFontType.pixel:

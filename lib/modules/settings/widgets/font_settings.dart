@@ -68,7 +68,7 @@ Widget _buildFontWidget(AppFontType fontType, BuildContext context) {
       fontWidget = Text(
         AppLocalizations.of(context)!.pixel,
         style: TextStyle(
-          fontFamily: getFontFamily(fontType),
+          fontFamily: fontFamily(fontType),
           fontSize: AppTheme.defaultFontSize(fontType),
         ),
       );
@@ -77,7 +77,7 @@ Widget _buildFontWidget(AppFontType fontType, BuildContext context) {
       fontWidget = Text(
         AppLocalizations.of(context)!.classic,
         style: TextStyle(
-          fontFamily: getFontFamily(fontType),
+          fontFamily: fontFamily(fontType),
           fontSize: AppTheme.defaultFontSize(fontType),
         ),
       );

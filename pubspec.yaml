@@ -47,7 +47,7 @@ flutter:
   generate: true
 
   assets:
-    - assets/images/default_skin.png
+    - assets/images/
 
   fonts:
     - family: PressStart2P

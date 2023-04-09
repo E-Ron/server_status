@@ -16,7 +16,7 @@ class ThemePreferences {
     prefs.setString(themeModeKey, enumToString(themeMode));
   }
 
-  Future<AppThemeMode> getThemeMode() async {
+  Future<AppThemeMode> fetchThemeMode() async {
     SharedPreferences prefs = await this.prefs;
     final themeModeString = prefs.getString(themeModeKey);
     return _themeModeFromString(themeModeString);
@@ -35,7 +35,7 @@ class ThemePreferences {
     prefs.setString(fontTypeKey, enumToString(fontType));
   }
 
-  Future<AppFontType> getFontType() async {
+  Future<AppFontType> fetchFontType() async {
     SharedPreferences prefs = await this.prefs;
     final fontTypeString = prefs.getString(fontTypeKey);
     return _fontTypeFromString(fontTypeString);
