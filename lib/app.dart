@@ -10,6 +10,9 @@ class App extends StatelessWidget {
 
   final AppTheme theme;
 
+  //if need english change to AppLocalizations.supportedLocales
+  static const supportedLocales = [Locale('ru')];
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -19,8 +22,7 @@ class App extends StatelessWidget {
           return MaterialApp(
             title: 'Minecraft server status',
             localizationsDelegates: AppLocalizations.localizationsDelegates,
-            //if need english change to AppLocalizations.supportedLocales
-            supportedLocales: const [Locale('ru')],
+            supportedLocales: supportedLocales,
             theme: themeNotifier.theme.themeData,
             home: const NavigationScreen(),
           );
