@@ -25,7 +25,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   ];
 
   static const List<PreferredSizeWidget> _appBarOptions = [
-    StatusAppBar(),
+    ServerStatusAppBar(),
     BuildingListAppBar(),
     SettingsAppBar(),
   ];

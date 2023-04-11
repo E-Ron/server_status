@@ -3,8 +3,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../widgets/server_status_action.dart';
 
-class StatusAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const StatusAppBar({Key? key}) : super(key: key);
+class ServerStatusAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
+  const ServerStatusAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
