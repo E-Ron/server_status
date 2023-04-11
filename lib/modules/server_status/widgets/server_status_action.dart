@@ -49,7 +49,7 @@ class ServerStatusAction extends StatelessWidget {
                 );
               case OnlineStatus.undefine:
                 return FetchWrapper(
-                  text: AppLocalizations.of(context)!.serverUnavailable,
+                  text: AppLocalizations.of(context)!.error,
                   color: Colors.grey,
                 );
             }
