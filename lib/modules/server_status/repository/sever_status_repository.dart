@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:http/http.dart' as http;
 
 import '../models/server_status.dart';
@@ -21,8 +22,17 @@ class ServerStatusService {
 
   static const _statusBaseUrl = 'api.mcstatus.io';
   static const _statusMethodPath = 'v2/status/java/';
-  static const _minecraftServerIp =
-      String.fromEnvironment('MINECRAFT_SERVER_IP');
+  static const _minecraftServerIpKey = 'MINECRAFT_SERVER_IP';
+  static String get _minecraftServerIp {
+    const ip = String.fromEnvironment(_minecraftServerIpKey);
+    if (ip.isEmpty) {
+      log(
+        'Define $_minecraftServerIpKey in environment, '
+        'add in you run config "--dart-define=$_minecraftServerIpKey=<IP>"',
+      );
+    }
+    return ip;
+  }
 
   static Uri get serviceUri {
     return Uri.https(_statusBaseUrl, '$_statusMethodPath$_minecraftServerIp');
