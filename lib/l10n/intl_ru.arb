@@ -1,4 +1,5 @@
 {
+  "@@locale": "ru",
   "online": "В сети",
   "buildings": "Постройки",
   "settings": "Настройки",
@@ -31,5 +32,4 @@
   "buildingListEmpty": "Список построек пуст.",
   "buildingListError": "Не удалось получить\nсписок построек.",
   "buildingList": "Список построек"
-
 }
