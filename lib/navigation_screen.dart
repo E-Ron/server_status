@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:minecraft_server_status/modules/server_status/screens/server_status_screen.dart';
 
 import 'modules/building/building.dart';
 import 'modules/server_status/server_status.dart';
@@ -18,13 +19,13 @@ class _NavigationScreenState extends State<NavigationScreen> {
   int _selectedIndex = 1;
 
   static const List<Widget> _bodyOptions = <Widget>[
-    PlayersListScreen(),
+    ServerStatusScreen(),
     BuildingListScreen(),
     SettingsScreen(),
   ];
 
   static const List<PreferredSizeWidget> _appBarOptions = [
-    StatusAppBar(),
+    ServerStatusAppBar(),
     BuildingListAppBar(),
     SettingsAppBar(),
   ];

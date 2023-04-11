@@ -5,7 +5,7 @@ import '../widgets/filter_button.dart';
 
 class BuildingListAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  const BuildingListAppBar({Key? key}) : super(key: key);
+  const BuildingListAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {

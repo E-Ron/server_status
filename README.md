@@ -1,8 +1,10 @@
 # Minecraft server status
- 
+
+### About
+Application for saving coordinates and checking server status   
+
 ### Deployment
 https://limitedasm.github.io/minecraft_server_status
-
 
 ### Hot-reloads for development
 ```

@@ -52,8 +52,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '801058183951',
     projectId: 'minecraft-server-status-379313',
     authDomain: 'minecraft-server-status-379313.firebaseapp.com',
-    databaseURL:
-        'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL: 'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'minecraft-server-status-379313.appspot.com',
   );
 
@@ -62,8 +61,7 @@ class DefaultFirebaseOptions {
     appId: '1:801058183951:android:be3feeb89e0211d5b83c7a',
     messagingSenderId: '801058183951',
     projectId: 'minecraft-server-status-379313',
-    databaseURL:
-        'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL: 'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'minecraft-server-status-379313.appspot.com',
   );
 
@@ -72,11 +70,9 @@ class DefaultFirebaseOptions {
     appId: '1:801058183951:ios:a5dbcd3dc434648db83c7a',
     messagingSenderId: '801058183951',
     projectId: 'minecraft-server-status-379313',
-    databaseURL:
-        'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL: 'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'minecraft-server-status-379313.appspot.com',
-    iosClientId:
-        '801058183951-kd36fgd1jcbrpcj3l3itn17rikqv3lr1.apps.googleusercontent.com',
+    iosClientId: '801058183951-kd36fgd1jcbrpcj3l3itn17rikqv3lr1.apps.googleusercontent.com',
     iosBundleId: 'com.lim.minecraftserverStatus',
   );
 }

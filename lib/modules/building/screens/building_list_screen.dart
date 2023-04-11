@@ -7,7 +7,7 @@ import '../bloc/building/building_bloc.dart';
 import '../widgets/building_list.dart';
 
 class BuildingListScreen extends StatelessWidget {
-  const BuildingListScreen({Key? key}) : super(key: key);
+  const BuildingListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

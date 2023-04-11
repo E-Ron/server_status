@@ -6,9 +6,12 @@ import 'navigation_screen.dart';
 import 'theme/theme_manager.dart';
 
 class App extends StatelessWidget {
-  const App({Key? key, required this.theme}) : super(key: key);
+  const App({super.key, required this.theme});
 
   final AppTheme theme;
+
+  //if need english change to AppLocalizations.supportedLocales
+  static const supportedLocales = [Locale('ru')];
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +22,7 @@ class App extends StatelessWidget {
           return MaterialApp(
             title: 'Minecraft server status',
             localizationsDelegates: AppLocalizations.localizationsDelegates,
-            //if need english change to AppLocalizations.supportedLocales
-            supportedLocales: const [Locale('ru')],
+            supportedLocales: supportedLocales,
             theme: themeNotifier.theme.themeData,
             home: const NavigationScreen(),
           );

@@ -6,9 +6,9 @@ import '../models/owner.dart';
 
 class FilterDialog extends StatefulWidget {
   const FilterDialog({
-    Key? key,
+    super.key,
     required this.buildingFilter,
-  }) : super(key: key);
+  });
   final BuildingFilter buildingFilter;
 
   @override

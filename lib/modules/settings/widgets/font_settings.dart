@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:minecraft_server_status/theme/theme_manager.dart';
 
 class FontSettings extends StatefulWidget {
-  const FontSettings({Key? key}) : super(key: key);
+  const FontSettings({super.key});
 
   @override
   State<FontSettings> createState() => _FontSettingsState();
@@ -68,7 +68,7 @@ Widget _buildFontWidget(AppFontType fontType, BuildContext context) {
       fontWidget = Text(
         AppLocalizations.of(context)!.pixel,
         style: TextStyle(
-          fontFamily: getFontFamily(fontType),
+          fontFamily: fontFamily(fontType),
           fontSize: AppTheme.defaultFontSize(fontType),
         ),
       );
@@ -77,7 +77,7 @@ Widget _buildFontWidget(AppFontType fontType, BuildContext context) {
       fontWidget = Text(
         AppLocalizations.of(context)!.classic,
         style: TextStyle(
-          fontFamily: getFontFamily(fontType),
+          fontFamily: fontFamily(fontType),
           fontSize: AppTheme.defaultFontSize(fontType),
         ),
       );

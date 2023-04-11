@@ -32,7 +32,6 @@ jobs:
     name: Deploy Web Build
     needs: build
     runs-on: ubuntu-latest
-
     steps:
       - name: Download Web Release
         uses: actions/download-artifact@v3

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
@@ -40,8 +41,10 @@ class ServerStatusBloc extends Bloc<ServerStatusEvent, ServerStatusState> {
           serverStatus: serverState,
         ),
       );
-    } catch (_) {
+    } on SocketException catch (_) {
       emit(state.copyWith(fetchStatus: ServerFetchStatus.failure));
+    } catch (_) {
+      rethrow;
     }
   }
 
