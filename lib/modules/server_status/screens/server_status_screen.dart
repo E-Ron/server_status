@@ -8,7 +8,7 @@ import '../bloc/server_status_bloc.dart';
 import '../widgets/players_list.dart';
 
 class ServerStatusScreen extends StatelessWidget {
-  const ServerStatusScreen({Key? key}) : super(key: key);
+  const ServerStatusScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

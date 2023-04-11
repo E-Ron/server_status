@@ -8,7 +8,7 @@ import '../models/server_status.dart';
 import 'fetch_wrapper.dart';
 
 class ServerStatusAction extends StatelessWidget {
-  const ServerStatusAction({Key? key}) : super(key: key);
+  const ServerStatusAction({super.key});
 
   @override
   Widget build(BuildContext context) {

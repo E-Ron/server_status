@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:minecraft_server_status/theme/theme_manager.dart';
 
 class ThemeSettings extends StatefulWidget {
-  const ThemeSettings({Key? key}) : super(key: key);
+  const ThemeSettings({super.key});
 
   @override
   State<ThemeSettings> createState() => _ThemeSettingsState();

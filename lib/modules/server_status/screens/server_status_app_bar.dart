@@ -5,7 +5,7 @@ import '../widgets/server_status_action.dart';
 
 class ServerStatusAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  const ServerStatusAppBar({Key? key}) : super(key: key);
+  const ServerStatusAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {

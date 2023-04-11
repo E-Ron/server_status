@@ -6,7 +6,7 @@ import 'navigation_screen.dart';
 import 'theme/theme_manager.dart';
 
 class App extends StatelessWidget {
-  const App({Key? key, required this.theme}) : super(key: key);
+  const App({super.key, required this.theme});
 
   final AppTheme theme;
 

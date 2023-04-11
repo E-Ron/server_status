@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:minecraft_server_status/theme/theme_manager.dart';
 
 class FontSettings extends StatefulWidget {
-  const FontSettings({Key? key}) : super(key: key);
+  const FontSettings({super.key});
 
   @override
   State<FontSettings> createState() => _FontSettingsState();

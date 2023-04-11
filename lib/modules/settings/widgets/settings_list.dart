@@ -4,7 +4,7 @@ import 'font_settings.dart';
 import 'theme_settings.dart';
 
 class SettingsList extends StatefulWidget {
-  const SettingsList({Key? key}) : super(key: key);
+  const SettingsList({super.key});
 
   @override
   State<SettingsList> createState() => _SettingsListState();
