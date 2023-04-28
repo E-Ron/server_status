@@ -3,7 +3,7 @@ String enumToString<T extends Enum>(T enumValue) {
 }
 
 T? enumFromString<T extends Enum>(String? string, List<T> enumValues) {
-  for (T value in enumValues) {
+  for (final T value in enumValues) {
     if (enumToString(value) == string) {
       return value;
     }

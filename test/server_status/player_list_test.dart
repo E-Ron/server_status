@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 import 'package:minecraft_server_status/models/player.dart';
 import 'package:minecraft_server_status/modules/server_status/widgets/players_list.dart';
@@ -15,7 +15,7 @@ void main() {
     testWidgets('is empty', (tester) async {
       const List<Player> mockPlayerList = [];
 
-      Widget app = buildLocalizedMaterialApp(
+      final Widget app = buildLocalizedMaterialApp(
         home: const PlayersList(players: mockPlayerList),
         navigatorKey: navigatorKey,
       );
@@ -31,7 +31,7 @@ void main() {
     testWidgets('has player', (tester) async {
       const List<Player> mockPlayerList = [mockPlayer1];
 
-      Widget app = buildLocalizedMaterialApp(
+      final Widget app = buildLocalizedMaterialApp(
         home: const PlayersList(players: mockPlayerList),
         navigatorKey: navigatorKey,
       );
@@ -44,7 +44,7 @@ void main() {
     testWidgets('has two players', (tester) async {
       const List<Player> mockPlayerList = [mockPlayer1, mockPlayer2];
 
-      Widget app = buildLocalizedMaterialApp(
+      final Widget app = buildLocalizedMaterialApp(
         home: const PlayersList(players: mockPlayerList),
         navigatorKey: navigatorKey,
       );

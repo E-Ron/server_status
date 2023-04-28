@@ -1,17 +1,11 @@
 import 'owner.dart';
-
-enum SelectedType {
-  any,
-  singeOwner,
-}
+import 'selected_owner.dart';
 
 class BuildingFilter {
   const BuildingFilter({
     required this.owners,
     required this.selectedOwner,
   });
-  final List<Owner> owners;
-  final SelectedOwner selectedOwner;
 
   BuildingFilter.initial()
       : this(
@@ -20,6 +14,9 @@ class BuildingFilter {
             type: SelectedType.any,
           ),
         );
+
+  final List<Owner> owners;
+  final SelectedOwner selectedOwner;
 
   BuildingFilter copyWith({
     List<Owner>? owners,
@@ -30,14 +27,4 @@ class BuildingFilter {
       selectedOwner: selectedOwner ?? this.selectedOwner,
     );
   }
-}
-
-class SelectedOwner {
-  SelectedOwner({
-    this.owner,
-    required this.type,
-  });
-
-  final Owner? owner;
-  final SelectedType type;
 }

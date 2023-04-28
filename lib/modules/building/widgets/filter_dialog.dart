@@ -3,6 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../models/building_filter.dart';
 import '../models/owner.dart';
+import '../models/selected_owner.dart';
 
 class FilterDialog extends StatefulWidget {
   const FilterDialog({
@@ -67,7 +68,6 @@ class _FilterDialogState extends State<FilterDialog> {
             }
           : null,
       child: Row(
-        mainAxisSize: MainAxisSize.max,
         children: [
           Text(
             AppLocalizations.of(context)!.anyOwner,
@@ -138,7 +138,7 @@ class _FilterDialogState extends State<FilterDialog> {
         final SelectedType type =
             isAnyOwner ? SelectedType.any : SelectedType.singeOwner;
         final Owner? owner = hasOwners ? currentOwner : null;
-        SelectedOwner selectedOwner = SelectedOwner(
+        final SelectedOwner selectedOwner = SelectedOwner(
           type: type,
           owner: owner,
         );

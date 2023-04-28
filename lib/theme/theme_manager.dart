@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'theme_preferences.dart';
+
 part 'theme.dart';
 
 class ThemeManager with ChangeNotifier {
-  ThemeManager({required theme}) : _theme = theme;
+  ThemeManager({required AppTheme theme}) : _theme = theme;
 
   final AppTheme _theme;
   final ThemePreferences _preferences =
@@ -14,15 +16,15 @@ class ThemeManager with ChangeNotifier {
     return _theme;
   }
 
-  setThemeMode(AppThemeMode mode) async {
+  Future<void> setThemeMode(AppThemeMode mode) async {
     _theme._mode = mode;
-    _preferences.setThemeMode(mode);
+    await _preferences.setThemeMode(mode);
     notifyListeners();
   }
 
-  setThemeFont(AppFontType font) async {
+  Future<void> setFontType(AppFontType font) async {
     _theme._font = font;
-    _preferences.setFontType(font);
+    await _preferences.setFontType(font);
     notifyListeners();
   }
 }

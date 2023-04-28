@@ -4,7 +4,7 @@ class LoadingAnimation extends StatefulWidget {
   const LoadingAnimation({super.key});
 
   @override
-  createState() => _LoadingAnimationState();
+  State<LoadingAnimation> createState() => _LoadingAnimationState();
 }
 
 class _LoadingAnimationState extends State<LoadingAnimation>
@@ -18,9 +18,9 @@ class _LoadingAnimationState extends State<LoadingAnimation>
 
   late Animation<double> _curve;
 
-  final Animatable<double> _tweenStart = ConstantTween(1.0);
-  final Animatable<double> _tweenIn = Tween(begin: 1.0, end: 2.0);
-  final Animatable<double> _tweenOut = Tween(begin: 2.0, end: 1.0);
+  final Animatable<double> _tweenStart = ConstantTween(1);
+  final Animatable<double> _tweenIn = Tween(begin: 1, end: 2);
+  final Animatable<double> _tweenOut = Tween(begin: 2, end: 1);
 
   late List<TweenSequenceItem<double>> _tweenSequenceInOut;
 
@@ -73,9 +73,9 @@ class _LoadingAnimationState extends State<LoadingAnimation>
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              LoadingAnimationItem(scaleAnimation: _scaleAnimation1),
-              LoadingAnimationItem(scaleAnimation: _scaleAnimation2),
-              LoadingAnimationItem(scaleAnimation: _scaleAnimation3),
+              _LoadingAnimationItem(scaleAnimation: _scaleAnimation1),
+              _LoadingAnimationItem(scaleAnimation: _scaleAnimation2),
+              _LoadingAnimationItem(scaleAnimation: _scaleAnimation3),
             ],
           ),
         ),
@@ -84,10 +84,10 @@ class _LoadingAnimationState extends State<LoadingAnimation>
   }
 }
 
-class LoadingAnimationItem extends StatelessWidget {
-  const LoadingAnimationItem({super.key, required this.scaleAnimation});
+class _LoadingAnimationItem extends StatelessWidget {
+  const _LoadingAnimationItem({required this.scaleAnimation});
 
-  final Animation scaleAnimation;
+  final Animation<double> scaleAnimation;
 
   @override
   Widget build(BuildContext context) {

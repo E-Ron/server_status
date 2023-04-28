@@ -11,6 +11,16 @@ import 'server_status_repository_test.mocks.dart';
 
 void main() {
   group('Server status repository', () {
+    const serverResponse = '{'
+        '"online": true,'
+        '"retrieved_at": 1678001174425,'
+        '"expires_at": 1678001234425,'
+        '"players": {'
+        '"online": 1,'
+        '"list": [{"name_clean": "Player"}]'
+        '}'
+        '}';
+
     test('Online server status if the http call completes successfully',
         () async {
       final client = MockClient();
@@ -20,7 +30,7 @@ void main() {
 
       final repository = ServerStatusRepository(client: client);
 
-      ServerStatus serverStatus = await repository.retrieveServerStatus();
+      final ServerStatus serverStatus = await repository.retrieveServerStatus();
 
       expect(serverStatus.onlineStatus, equals(OnlineStatus.online));
     });
@@ -34,19 +44,9 @@ void main() {
 
       final repository = ServerStatusRepository(client: client);
 
-      ServerStatus serverStatus = await repository.retrieveServerStatus();
+      final ServerStatus serverStatus = await repository.retrieveServerStatus();
 
       expect(serverStatus.onlineStatus, equals(OnlineStatus.undefine));
     });
   });
 }
-
-const serverResponse = '{'
-    '"online": true,'
-    '"retrieved_at": 1678001174425,'
-    '"expires_at": 1678001234425,'
-    '"players": {'
-    '"online": 1,'
-    '"list": [{"name_clean": "Player"}]'
-    '}'
-    '}';

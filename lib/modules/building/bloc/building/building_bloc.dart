@@ -16,7 +16,7 @@ class BuildingBloc extends Bloc<BuildingEvent, BuildingState> {
 
   final BuildingRepository _buildingRepository;
 
-  _initialFetchBuilding(
+  Future<void> _initialFetchBuilding(
       BuildingInitialFetched event, Emitter<BuildingState> emit) async {
     await _buildingRepository.retrieveBuildingData().then((buildingList) {
       emit(BuildingSuccess(
@@ -25,7 +25,7 @@ class BuildingBloc extends Bloc<BuildingEvent, BuildingState> {
     });
   }
 
-  _filteredFetchBuilding(
+  Future<void> _filteredFetchBuilding(
       BuildingFilteredFetched event, Emitter<BuildingState> emit) async {
     await _buildingRepository
         .retrieveFilteredBuildingData(event.filter)

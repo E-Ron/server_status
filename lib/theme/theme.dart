@@ -11,6 +11,13 @@ enum AppFontType {
 }
 
 class AppTheme {
+  AppTheme({required AppThemeMode mode, AppFontType font = defaultFont})
+      : _font = font,
+        _mode = mode;
+
+  AppTheme.light() : this(mode: AppThemeMode.light);
+  AppTheme.dark() : this(mode: AppThemeMode.dark);
+
   static const defaultFont = AppFontType.pixel;
   static const defaultMode = AppThemeMode.light;
 
@@ -27,10 +34,6 @@ class AppTheme {
     return fontSize;
   }
 
-  AppTheme({required AppThemeMode mode, AppFontType font = defaultFont})
-      : _font = font,
-        _mode = mode;
-
   AppThemeMode _mode;
   AppFontType _font;
 
@@ -42,11 +45,8 @@ class AppTheme {
     return _font;
   }
 
-  AppTheme.light() : this(mode: AppThemeMode.light);
-  AppTheme.dark() : this(mode: AppThemeMode.dark);
-
   static Future<AppTheme> fromStorage() async {
-    ThemePreferences themePreferences = ThemePreferences(
+    final ThemePreferences themePreferences = ThemePreferences(
       prefs: SharedPreferences.getInstance(),
     );
     late final AppFontType font;
@@ -57,8 +57,6 @@ class AppTheme {
     ]);
     return AppTheme(mode: mode, font: font);
   }
-
-  toStorage() {}
 
   ThemeData get themeData {
     late ThemeData themeData;

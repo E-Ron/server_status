@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:http/http.dart' as http;
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:minecraft_server_status/modules/server_status/screens/server_status_screen.dart';
+import 'package:http/http.dart' as http;
 
 import 'modules/building/building.dart';
+import 'modules/server_status/screens/server_status_screen.dart';
 import 'modules/server_status/server_status.dart';
 import 'modules/settings/settings.dart';
 

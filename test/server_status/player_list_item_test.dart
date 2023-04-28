@@ -8,7 +8,7 @@ void main() {
   const Player mockPlayer = 'Player';
 
   group('Player list item', () {
-    Widget widget = const MaterialApp(
+    const Widget widget = MaterialApp(
       home: PlayerListItem(player: mockPlayer),
     );
 

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/building_filter.dart';
 import '../../models/owner.dart';
+import '../../models/selected_owner.dart';
 import '../../repository/filter_repository.dart';
 
 part 'filter_event.dart';
@@ -21,9 +22,8 @@ class FilterBloc extends Bloc<FilterEvent, FilterState> {
 
   final FilterRepository _filterRepository;
 
-  Future<void> _fetchOwners(event, emit) async {
-    late List<Owner> owners;
-    owners = await _filterRepository.retrieveFilterData();
+  Future<void> _fetchOwners(OwnersFetched event, emit) async {
+    final List<Owner> owners = await _filterRepository.retrieveFilterData();
     emit(
       FilterSuccess(
         buildingFilter: state.buildingFilter.copyWith(owners: owners),
