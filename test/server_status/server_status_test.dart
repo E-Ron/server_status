@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:minecraft_server_status/modules/server_status/models/server_status.dart';
+import 'package:server_status/modules/server_status/models/server_status.dart';
 
 void main() {
   group('Server Status', () {

@@ -1,4 +1,4 @@
-import 'package:minecraft_server_status/models/player.dart';
+import 'package:server_status/models/player.dart';
 
 import 'catch_time.dart';
 

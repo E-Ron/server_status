@@ -20,7 +20,7 @@ jobs:
         uses: ./.github/actions/flutter_init
 
       - name: Start Web Release Build
-        run: flutter build web --release --dart-define=MINECRAFT_SERVER_IP=${{ vars.MINECRAFT_SERVER_IP }} --base-href "/${{ github.event.repository.name }}/"
+        run: flutter build web --release --dart-define=SERVER_IP=${{ vars.SERVER_IP }} --base-href "/${{ github.event.repository.name }}/"
 
       - name: Upload Web Build Files
         uses: actions/upload-artifact@v3

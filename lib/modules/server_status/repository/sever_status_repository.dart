@@ -22,7 +22,7 @@ class ServerStatusService {
 
   static const _statusBaseUrl = 'api.mcstatus.io';
   static const _statusMethodPath = 'v2/status/java/';
-  static const _minecraftServerIpKey = 'MINECRAFT_SERVER_IP';
+  static const _minecraftServerIpKey = 'SERVER_IP';
   static String get _minecraftServerIp {
     const ip = String.fromEnvironment(_minecraftServerIpKey);
     if (ip.isEmpty) {

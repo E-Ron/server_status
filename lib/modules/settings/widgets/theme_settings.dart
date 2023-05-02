@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:minecraft_server_status/theme/theme_manager.dart';
+import 'package:server_status/theme/theme_manager.dart';
 
 class ThemeSettings extends StatelessWidget {
   const ThemeSettings({super.key});

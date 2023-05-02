@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:minecraft_server_status/models/player.dart';
-import 'package:minecraft_server_status/modules/server_status/widgets/player_list_item.dart';
+import 'package:server_status/models/player.dart';
+import 'package:server_status/modules/server_status/widgets/player_list_item.dart';
 
 void main() {
   const Player mockPlayer = 'Player';

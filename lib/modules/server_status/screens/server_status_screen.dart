@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:minecraft_server_status/widgets/loading_animation.dart';
+import 'package:server_status/widgets/loading_animation.dart';
 import '../bloc/server_status_bloc.dart';
 import '../models/server_status.dart';
 import '../widgets/players_list.dart';

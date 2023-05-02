@@ -1,7 +1,7 @@
 {
   "file_generated_by": "FlutterFire CLI",
   "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
-  "GOOGLE_APP_ID": "1:801058183951:ios:a5dbcd3dc434648db83c7a",
-  "FIREBASE_PROJECT_ID": "minecraft-server-status-379313",
-  "GCM_SENDER_ID": "801058183951"
+  "GOOGLE_APP_ID": "1:110941769754:ios:a5d560b5ed86b22c6501a3",
+  "FIREBASE_PROJECT_ID": "server-status-7a338",
+  "GCM_SENDER_ID": "110941769754"
 }

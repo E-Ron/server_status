@@ -1,77 +1,40 @@
 {
   "project_info": {
-    "project_number": "801058183951",
-    "firebase_url": "https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "minecraft-server-status-379313",
-    "storage_bucket": "minecraft-server-status-379313.appspot.com"
+    "project_number": "110941769754",
+    "project_id": "server-status-7a338",
+    "storage_bucket": "server-status-7a338.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:801058183951:android:d36d27c568f4aa5ab83c7a",
+        "mobilesdk_app_id": "1:110941769754:android:c75d7795aa2bc4646501a3",
         "android_client_info": {
-          "package_name": "com.lim.minecraft_serveer_status"
+          "package_name": "com.lim.server_status"
         }
       },
       "oauth_client": [
         {
-          "client_id": "801058183951-a0huarh5r0jhisuv4duvdpt16t0kimgv.apps.googleusercontent.com",
+          "client_id": "110941769754-gqlnkj56jhpvhc1t90vk4kbq1cdo3u45.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAwMrCb_sogj47zRiAEi0p9dbPuoUuPP1o"
+          "current_key": "AIzaSyCjJ-a1wMXHnxhCSoWwWgiSlCO5Thqw-uw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "801058183951-a0huarh5r0jhisuv4duvdpt16t0kimgv.apps.googleusercontent.com",
+              "client_id": "110941769754-gqlnkj56jhpvhc1t90vk4kbq1cdo3u45.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "801058183951-k1e6copemnreu7eo2v401vma8bkgpfur.apps.googleusercontent.com",
+              "client_id": "110941769754-1km6f65gbqbh030n2ldb1pirh3qr73m5.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.lim.minecraftServeerStatus"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:801058183951:android:be3feeb89e0211d5b83c7a",
-        "android_client_info": {
-          "package_name": "com.lim.minecraft_server_status"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "801058183951-a0huarh5r0jhisuv4duvdpt16t0kimgv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAwMrCb_sogj47zRiAEi0p9dbPuoUuPP1o"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "801058183951-a0huarh5r0jhisuv4duvdpt16t0kimgv.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "801058183951-k1e6copemnreu7eo2v401vma8bkgpfur.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.lim.minecraftServeerStatus"
+                "bundle_id": "com.lim.minecraftserverStatus"
               }
             }
           ]

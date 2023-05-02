@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:minecraft_server_status/utils/enum.dart';
+import 'package:server_status/utils/enum.dart';
 import 'theme_manager.dart';
 
 class ThemePreferences {

@@ -20,7 +20,7 @@ class App extends StatelessWidget {
       child: Consumer<ThemeManager>(
         builder: (context, themeNotifier, child) {
           return MaterialApp(
-            title: 'Minecraft server status',
+            title: 'Server status',
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: supportedLocales,
             theme: themeNotifier.theme.themeData,

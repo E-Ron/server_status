@@ -1,4 +1,4 @@
-package com.lim.minecraft_server_status
+package com.lim.server_status
 
 import io.flutter.embedding.android.FlutterActivity
 

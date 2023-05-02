@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:minecraft_server_status/models/player.dart';
-import 'package:minecraft_server_status/modules/server_status/widgets/players_list.dart';
+import 'package:server_status/models/player.dart';
+import 'package:server_status/modules/server_status/widgets/players_list.dart';
 import '../test_utils/build_app.dart';
 
 void main() {

@@ -47,32 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCawKkpTrrtvkanlPUE9dgdN4o7A7cMcjU',
-    appId: '1:801058183951:web:a1797d3501fce24fb83c7a',
-    messagingSenderId: '801058183951',
-    projectId: 'minecraft-server-status-379313',
-    authDomain: 'minecraft-server-status-379313.firebaseapp.com',
-    databaseURL: 'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'minecraft-server-status-379313.appspot.com',
+    apiKey: 'AIzaSyCpM6zBzFrC8tbfLQaOBQr6d1Nx5B610N8',
+    appId: '1:110941769754:web:9e3d414948c4068c6501a3',
+    messagingSenderId: '110941769754',
+    projectId: 'server-status-7a338',
+    authDomain: 'server-status-7a338.firebaseapp.com',
+    storageBucket: 'server-status-7a338.appspot.com',
+    measurementId: 'G-01T7QE1PX6',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAwMrCb_sogj47zRiAEi0p9dbPuoUuPP1o',
-    appId: '1:801058183951:android:be3feeb89e0211d5b83c7a',
-    messagingSenderId: '801058183951',
-    projectId: 'minecraft-server-status-379313',
-    databaseURL: 'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'minecraft-server-status-379313.appspot.com',
+    apiKey: 'AIzaSyCjJ-a1wMXHnxhCSoWwWgiSlCO5Thqw-uw',
+    appId: '1:110941769754:android:c75d7795aa2bc4646501a3',
+    messagingSenderId: '110941769754',
+    projectId: 'server-status-7a338',
+    storageBucket: 'server-status-7a338.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDuJfYyf1IatFk-0INbo192V7Ik-Tgb4ag',
-    appId: '1:801058183951:ios:a5dbcd3dc434648db83c7a',
-    messagingSenderId: '801058183951',
-    projectId: 'minecraft-server-status-379313',
-    databaseURL: 'https://minecraft-server-status-379313-default-rtdb.europe-west1.firebasedatabase.app',
-    storageBucket: 'minecraft-server-status-379313.appspot.com',
-    iosClientId: '801058183951-kd36fgd1jcbrpcj3l3itn17rikqv3lr1.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAbHi1MxMgnuUQkb7OgIEaIeufGIZgq5Bg',
+    appId: '1:110941769754:ios:a5d560b5ed86b22c6501a3',
+    messagingSenderId: '110941769754',
+    projectId: 'server-status-7a338',
+    storageBucket: 'server-status-7a338.appspot.com',
+    iosClientId: '110941769754-1km6f65gbqbh030n2ldb1pirh3qr73m5.apps.googleusercontent.com',
     iosBundleId: 'com.lim.minecraftserverStatus',
   );
 }

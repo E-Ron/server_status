@@ -1,5 +1,5 @@
-name: minecraft_server_status
-description: Minecraft server status.
+name: server_status
+description: Server status.
 
 publish_to: "none"
 

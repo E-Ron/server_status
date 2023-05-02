@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:minecraft_server_status/theme/theme_manager.dart';
-import 'package:minecraft_server_status/theme/theme_preferences.dart';
+import 'package:server_status/theme/theme_manager.dart';
+import 'package:server_status/theme/theme_preferences.dart';
 
 void main() {
   group('Theme preferences', () {

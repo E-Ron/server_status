@@ -3,8 +3,8 @@ import 'package:http/http.dart' as http;
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import 'package:minecraft_server_status/modules/server_status/models/server_status.dart';
-import 'package:minecraft_server_status/modules/server_status/repository/sever_status_repository.dart';
+import 'package:server_status/modules/server_status/models/server_status.dart';
+import 'package:server_status/modules/server_status/repository/sever_status_repository.dart';
 
 @GenerateMocks([http.Client])
 import 'server_status_repository_test.mocks.dart';
