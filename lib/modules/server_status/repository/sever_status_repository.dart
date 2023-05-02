@@ -22,20 +22,20 @@ class ServerStatusService {
 
   static const _statusBaseUrl = 'api.mcstatus.io';
   static const _statusMethodPath = 'v2/status/java/';
-  static const _minecraftServerIpKey = 'SERVER_IP';
-  static String get _minecraftServerIp {
-    const ip = String.fromEnvironment(_minecraftServerIpKey);
+  static const _serverIpKey = 'SERVER_IP';
+  static String get _serverIp {
+    const ip = String.fromEnvironment(_serverIpKey);
     if (ip.isEmpty) {
       log(
-        'Define $_minecraftServerIpKey in environment, '
-        'add in you run config "--dart-define=$_minecraftServerIpKey=<IP>"',
+        'Define $_serverIpKey in environment, '
+        'add in you run config "--dart-define=$_serverIpKey=<IP>"',
       );
     }
     return ip;
   }
 
   static Uri get serviceUri {
-    return Uri.https(_statusBaseUrl, '$_statusMethodPath$_minecraftServerIp');
+    return Uri.https(_statusBaseUrl, '$_statusMethodPath$_serverIp');
   }
 
   Future<ServerStatus> retrieveServerStatus() async {

@@ -66,11 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAbHi1MxMgnuUQkb7OgIEaIeufGIZgq5Bg',
-    appId: '1:110941769754:ios:a5d560b5ed86b22c6501a3',
+    appId: '1:110941769754:ios:fd4f31f1faf17f876501a3',
     messagingSenderId: '110941769754',
     projectId: 'server-status-7a338',
     storageBucket: 'server-status-7a338.appspot.com',
-    iosClientId: '110941769754-1km6f65gbqbh030n2ldb1pirh3qr73m5.apps.googleusercontent.com',
-    iosBundleId: 'com.lim.minecraftserverStatus',
+    iosClientId: '110941769754-6rnv7137hnkd4psouj3427dghqi8skv2.apps.googleusercontent.com',
+    iosBundleId: 'com.lim.serverStatus',
   );
 }
