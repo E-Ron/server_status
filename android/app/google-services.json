@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:110941769754:android:c75d7795aa2bc4646501a3",
+        "mobilesdk_app_id": "1:110941769754:android:b3a174d17950ddd16501a3",
         "android_client_info": {
           "package_name": "com.lim.server_status"
         }
