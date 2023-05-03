@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:minecraft_server_status/modules/building/models/building.dart';
-import 'package:minecraft_server_status/modules/building/models/building_filter.dart';
-import 'package:minecraft_server_status/modules/building/models/owner.dart';
+
+import '../models/building.dart';
+import '../models/building_filter.dart';
+import '../models/owner.dart';
+import '../models/selected_owner.dart';
 
 class BuildingRepository {
   BuildingService service = BuildingService();
@@ -23,7 +25,7 @@ class BuildingService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
   Future<List<Building>> retrieveBuildingData() async {
-    QuerySnapshot<Map<String, dynamic>> snapshot =
+    final QuerySnapshot<Map<String, dynamic>> snapshot =
         await _db.collection('buildings').get();
     return snapshot.docs
         .map((docSnapshot) => Building.fromJson(docSnapshot.data()))
@@ -31,9 +33,9 @@ class BuildingService {
   }
 
   Future<BuildingFilter> retrieveFilterData() async {
-    QuerySnapshot<Map<String, dynamic>> snapshot =
+    final QuerySnapshot<Map<String, dynamic>> snapshot =
         await _db.collection('owners').get();
-    List<Owner> owners = snapshot.docs
+    final List<Owner> owners = snapshot.docs
         .map((docSnapshot) => docSnapshot.data()['name'] as Owner)
         .toList();
     return BuildingFilter.initial().copyWith(owners: owners);
@@ -47,10 +49,10 @@ class BuildingService {
       filteredCollection = collection;
     } else {
       filteredCollection =
-          collection.where("owners", arrayContains: filter.selectedOwner.owner);
+          collection.where('owners', arrayContains: filter.selectedOwner.owner);
     }
 
-    QuerySnapshot<Map<String, dynamic>> snapshot =
+    final QuerySnapshot<Map<String, dynamic>> snapshot =
         await filteredCollection.get() as QuerySnapshot<Map<String, dynamic>>;
 
     return snapshot.docs.map((docSnapshot) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 import 'navigation_screen.dart';
 import 'theme/theme_manager.dart';
@@ -20,7 +20,7 @@ class App extends StatelessWidget {
       child: Consumer<ThemeManager>(
         builder: (context, themeNotifier, child) {
           return MaterialApp(
-            title: 'Minecraft server status',
+            title: 'Server status',
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: supportedLocales,
             theme: themeNotifier.theme.themeData,

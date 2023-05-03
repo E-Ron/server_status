@@ -88,8 +88,8 @@ class BuildingListItem extends StatelessWidget {
       return result;
     }
 
-    String formattedCoordinates = formatCoordinates(building.coordinates);
-    Color coordinatesColor =
+    final String formattedCoordinates = formatCoordinates(building.coordinates);
+    final Color coordinatesColor =
         _getColorBasedOnDimension(building.coordinates.dimension);
 
     return Text(
@@ -107,7 +107,7 @@ class BuildingListItem extends StatelessWidget {
       }
     }
 
-    String formattedOwners = formatOwners(building.owners);
+    final String formattedOwners = formatOwners(building.owners);
 
     return Text(
       formattedOwners,

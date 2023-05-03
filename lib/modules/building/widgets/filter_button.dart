@@ -5,6 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../bloc/building/building_bloc.dart';
 import '../bloc/filter/filter_bloc.dart';
 import '../models/building_filter.dart';
+import '../models/selected_owner.dart';
 import 'filter_dialog.dart';
 
 class FilterButton extends StatefulWidget {
@@ -27,19 +28,19 @@ class _FilterButtonState extends State<FilterButton> {
       } else if (state is FilterSuccess) {
         return TextButton(
           onPressed: () async {
-            await showDialog(
+            await showDialog<SelectedOwner?>(
               context: context,
               builder: (BuildContext context) {
                 return FilterDialog(
                   buildingFilter: state.buildingFilter,
                 );
               },
-            ).then((value) {
+            ).then((SelectedOwner? value) {
               if (value is SelectedOwner) {
                 context
                     .read<FilterBloc>()
                     .add(SelectedOwnerChanged(selectedOwner: value));
-                BuildingFilter filter = BuildingFilter(
+                final BuildingFilter filter = BuildingFilter(
                   owners: [],
                   selectedOwner: value,
                 );

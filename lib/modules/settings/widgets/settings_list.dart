@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 import 'font_settings.dart';
 import 'theme_settings.dart';
 
-class SettingsList extends StatefulWidget {
+class SettingsList extends StatelessWidget {
   const SettingsList({super.key});
 
-  @override
-  State<SettingsList> createState() => _SettingsListState();
-}
-
-class _SettingsListState extends State<SettingsList> {
   @override
   Widget build(BuildContext context) {
     return Padding(

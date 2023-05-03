@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
-import 'package:minecraft_server_status/theme/theme_manager.dart';
+import 'package:server_status/theme/theme_manager.dart';
 
 class FontSettings extends StatefulWidget {
   const FontSettings({super.key});
@@ -26,16 +26,16 @@ class _FontSettingsState extends State<FontSettings> {
   }
 
   List<Widget> _buildFontVariantList() {
-    List<Widget> list = [];
-    for (AppFontType font in AppFontType.values) {
-      list.add(FontVariant(fontType: font));
+    final List<Widget> list = [];
+    for (final AppFontType font in AppFontType.values) {
+      list.add(_FontVariant(fontType: font));
     }
     return list;
   }
 }
 
-class FontVariant extends StatelessWidget {
-  const FontVariant({
+class _FontVariant extends StatelessWidget {
+  const _FontVariant({
     Key? key,
     required this.fontType,
   }) : super(key: key);
@@ -52,7 +52,7 @@ class FontVariant extends StatelessWidget {
           onTap: isCurrentFont
               ? null
               : () {
-                  themeNotifier.setThemeFont(fontType);
+                  themeNotifier.setFontType(fontType);
                 },
           child: _buildFontWidget(fontType, context),
         );

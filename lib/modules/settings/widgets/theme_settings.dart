@@ -2,16 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'package:minecraft_server_status/theme/theme_manager.dart';
+import 'package:server_status/theme/theme_manager.dart';
 
-class ThemeSettings extends StatefulWidget {
+class ThemeSettings extends StatelessWidget {
   const ThemeSettings({super.key});
 
-  @override
-  State<ThemeSettings> createState() => _ThemeSettingsState();
-}
-
-class _ThemeSettingsState extends State<ThemeSettings> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -26,30 +21,28 @@ class _ThemeSettingsState extends State<ThemeSettings> {
   }
 
   List<Widget> _buildThemeVariantList() {
-    List<Widget> list = [];
-    for (AppThemeMode mode in AppThemeMode.values) {
-      list.add(ThemeVariant(themeMode: mode));
+    final List<Widget> list = [];
+    for (final AppThemeMode mode in AppThemeMode.values) {
+      list.add(_ThemeVariant(themeMode: mode));
     }
     return list;
   }
 }
 
-class ThemeVariant extends StatelessWidget {
-  const ThemeVariant({
+class _ThemeVariant extends StatelessWidget {
+  const _ThemeVariant({
     Key? key,
     required this.themeMode,
-    this.hasIcon = true,
   }) : super(key: key);
 
   final AppThemeMode themeMode;
-  final bool hasIcon;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Consumer<ThemeManager>(
           builder: (context, ThemeManager themeNotifier, child) {
-        bool isCurrentTheme = themeMode == themeNotifier.theme.mode;
+        final bool isCurrentTheme = themeMode == themeNotifier.theme.mode;
         return GestureDetector(
           onTap: isCurrentTheme
               ? null
@@ -66,7 +59,7 @@ class ThemeVariant extends StatelessWidget {
                 color: _getThemeBackgroundColor(themeMode),
                 shape: BoxShape.circle,
               ),
-              child: hasIcon ? _getThemeIcon(themeMode) : null),
+              child: _getThemeIcon(themeMode)),
         );
       }),
     );

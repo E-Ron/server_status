@@ -1,7 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:minecraft_server_status/theme/theme_manager.dart';
-import 'package:minecraft_server_status/theme/theme_preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:server_status/theme/theme_manager.dart';
+import 'package:server_status/theme/theme_preferences.dart';
 
 void main() {
   group('Theme preferences', () {
@@ -10,7 +11,7 @@ void main() {
     test('Get empty preferences', () async {
       SharedPreferences.setMockInitialValues({});
 
-      ThemePreferences themePreferences = ThemePreferences(
+      final ThemePreferences themePreferences = ThemePreferences(
         prefs: SharedPreferences.getInstance(),
       );
 
@@ -40,9 +41,7 @@ void main() {
         prefs: SharedPreferences.getInstance(),
       );
 
-      themePreferences.setFontType(AppFontType.classic);
-
-      await Future.delayed(const Duration(microseconds: 200));
+      await themePreferences.setFontType(AppFontType.classic);
 
       final prefs = await SharedPreferences.getInstance();
       final fontTypeRaw = prefs.get(ThemePreferences.fontTypeKey);
@@ -60,7 +59,7 @@ void main() {
         prefs: SharedPreferences.getInstance(),
       );
 
-      themePreferences.setFontType(AppFontType.classic);
+      await themePreferences.setFontType(AppFontType.classic);
 
       final prefs = await SharedPreferences.getInstance();
       final fontTypeRaw = prefs.get(ThemePreferences.fontTypeKey);

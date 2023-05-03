@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
+import 'package:equatable/equatable.dart';
 import 'package:stream_transform/stream_transform.dart';
 
 import '../models/server_status.dart';

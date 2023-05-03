@@ -1,6 +1,6 @@
 {
-    "name": "minecraft_server_status",
-    "short_name": "minecraft_server_status",
+    "name": "server_status",
+    "short_name": "server_status",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#hexcode",

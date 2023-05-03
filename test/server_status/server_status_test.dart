@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:minecraft_server_status/modules/server_status/models/server_status.dart';
+import 'package:server_status/modules/server_status/models/server_status.dart';
 
 void main() {
   group('Server Status', () {
@@ -9,13 +9,13 @@ void main() {
         expect(
           ServerStatus.fromJson(
             const <String, dynamic>{
-              "online": true,
-              "retrieved_at": 1678001174425,
-              "expires_at": 1678001234425,
-              "players": {
-                "online": 1,
-                "list": [
-                  {"name_clean": "Player"}
+              'online': true,
+              'retrieved_at': 1678001174425,
+              'expires_at': 1678001234425,
+              'players': {
+                'online': 1,
+                'list': [
+                  {'name_clean': 'Player'}
                 ]
               }
             },
@@ -39,7 +39,7 @@ void main() {
               .having(
             (w) => w.players,
             'players list',
-            ["Player"],
+            ['Player'],
           ).having(
             (w) => w.playersOnline,
             'players online',

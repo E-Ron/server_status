@@ -13,10 +13,10 @@ class FilterRepository {
 class FilterService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   Future<List<Owner>> retrieveFilterData() async {
-    QuerySnapshot<Map<String, dynamic>> snapshot =
+    final QuerySnapshot<Map<String, dynamic>> snapshot =
         await _db.collection('owners').get();
 
-    List<Owner> owners = snapshot.docs.map((docSnapshot) {
+    final List<Owner> owners = snapshot.docs.map((docSnapshot) {
       return docSnapshot.data()['name'] as Owner;
     }).toList();
 

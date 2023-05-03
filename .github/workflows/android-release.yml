@@ -27,7 +27,7 @@ jobs:
         uses: ./.github/actions/flutter_init
 
       - name: Start Android Release Build
-        run: flutter build apk --release --dart-define=MINECRAFT_SERVER_IP=${{ vars.MINECRAFT_SERVER_IP }}
+        run: flutter build apk --release --dart-define=SERVER_IP=${{ vars.SERVER_IP }}
 
       - name: Upload Android Build Files
         uses: actions/upload-artifact@v3

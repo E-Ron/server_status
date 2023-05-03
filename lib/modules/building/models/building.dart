@@ -9,10 +9,6 @@ class Building {
     required this.owners,
   });
 
-  final Coordinates coordinates;
-  final String name;
-  final List<Owner> owners;
-
   factory Building.fromJson(Map<String, dynamic> json) {
     late Coordinates coordinates;
     if (json['coordinates'] != null) {
@@ -23,7 +19,7 @@ class Building {
       coordinates = Coordinates.empty();
     }
 
-    String name = json['name'] ?? '';
+    final String name = json['name'] ?? '';
     List<String> owners = [];
     if (json['owners'] != null) {
       owners = List<String>.from(json['owners']);
@@ -34,6 +30,10 @@ class Building {
       owners: owners,
     );
   }
+
+  final Coordinates coordinates;
+  final String name;
+  final List<Owner> owners;
 }
 
 class Coordinates {
@@ -43,6 +43,19 @@ class Coordinates {
     required this.z,
     required this.dimension,
   });
+
+  factory Coordinates.fromJson(Map<String, dynamic> json) {
+    final int? x = json['x'];
+    final int? y = json['y'];
+    final int? z = json['z'];
+    final Dimension dimension = _dimensionFromJson(json['dimension']);
+    return Coordinates(
+      x: x,
+      y: y,
+      z: z,
+      dimension: dimension,
+    );
+  }
 
   Coordinates.empty()
       : this(
@@ -56,19 +69,6 @@ class Coordinates {
   final int? y;
   final int? z;
   final Dimension dimension;
-
-  factory Coordinates.fromJson(Map<String, dynamic> json) {
-    int? x = json['x'];
-    int? y = json['y'];
-    int? z = json['z'];
-    Dimension dimension = _dimensionFromJson(json['dimension']);
-    return Coordinates(
-      x: x,
-      y: y,
-      z: z,
-      dimension: dimension,
-    );
-  }
 }
 
 Dimension _dimensionFromJson(String? jsonDimension) {

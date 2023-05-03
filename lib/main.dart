@@ -1,13 +1,13 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 
 import 'app.dart';
 import 'firebase_options.dart';
 import 'theme/theme_manager.dart';
 
-main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  late AppTheme theme = AppTheme.light();
+  AppTheme theme = AppTheme.light();
   await Future.wait([
     AppTheme.fromStorage().then((value) => theme = value),
     Firebase.initializeApp(
