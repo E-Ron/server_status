@@ -71633,7 +71633,7 @@ A.ac0.prototype={
 w6(){var s=0,r=A.W(t.cS),q,p=this,o
 var $async$w6=A.X(function(a,b){if(a===1)return A.T(b,r)
 while(true)switch(s){case 0:s=3
-return A.a1(p.a.tx("GET",A.aJW("https","api.mcstatus.io","v2/status/java/",null),null),$async$w6)
+return A.a1(p.a.tx("GET",A.aJW("https","api.mcstatus.io","v2/status/java/5.3.215.249",null),null),$async$w6)
 case 3:o=b
 if(o.b===200){q=A.aHU(t.a.a(B.aY.da(0,A.aMH(A.aKp(o.e).c.a.i(0,"charset")).da(0,o.w))))
 s=1
