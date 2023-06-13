@@ -47,30 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCpM6zBzFrC8tbfLQaOBQr6d1Nx5B610N8',
-    appId: '1:110941769754:web:9e3d414948c4068c6501a3',
-    messagingSenderId: '110941769754',
-    projectId: 'server-status-7a338',
-    authDomain: 'server-status-7a338.firebaseapp.com',
-    storageBucket: 'server-status-7a338.appspot.com',
-    measurementId: 'G-01T7QE1PX6',
+    apiKey: 'AIzaSyCIpCmlY200ero8Q8qLllNhbtgkfciqpXI',
+    appId: '1:333617492020:web:5ece3c766ab005c7209a61',
+    messagingSenderId: '333617492020',
+    projectId: 'jopa-2-7ceee',
+    authDomain: 'jopa-2-7ceee.firebaseapp.com',
+    storageBucket: 'jopa-2-7ceee.appspot.com',
+    measurementId: 'G-970S039H2K',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCjJ-a1wMXHnxhCSoWwWgiSlCO5Thqw-uw',
-    appId: '1:110941769754:android:b3a174d17950ddd16501a3',
-    messagingSenderId: '110941769754',
-    projectId: 'server-status-7a338',
-    storageBucket: 'server-status-7a338.appspot.com',
+    apiKey: 'AIzaSyBYZ1l_93KZ5Stnq4e-TQLVW6uFC5F1XfQ',
+    appId: '1:333617492020:android:0e34dc95bf0ee28e209a61',
+    messagingSenderId: '333617492020',
+    projectId: 'jopa-2-7ceee',
+    storageBucket: 'jopa-2-7ceee.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAbHi1MxMgnuUQkb7OgIEaIeufGIZgq5Bg',
-    appId: '1:110941769754:ios:fd4f31f1faf17f876501a3',
-    messagingSenderId: '110941769754',
-    projectId: 'server-status-7a338',
-    storageBucket: 'server-status-7a338.appspot.com',
-    iosClientId: '110941769754-6rnv7137hnkd4psouj3427dghqi8skv2.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAHAxTS-Nw9eFaJR_xvpecSOams_RQiMaA',
+    appId: '1:333617492020:ios:679420a040624e24209a61',
+    messagingSenderId: '333617492020',
+    projectId: 'jopa-2-7ceee',
+    storageBucket: 'jopa-2-7ceee.appspot.com',
+    iosClientId: '333617492020-6fv3c4341f36sitbe4o0e8a0vophpvih.apps.googleusercontent.com',
     iosBundleId: 'com.lim.serverStatus',
   );
 }
