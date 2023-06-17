@@ -1,0 +1,30 @@
+name: Firebase Deploy Web
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Create Web Build
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3
+
+      - name: Flutter Initial
+        uses: ./.github/actions/flutter_init
+
+      - name: Start Web Release Build
+        run: flutter build web 
+
+      - name: Upload Web Build Files
+        uses: actions/upload-artifact@v3
+        with:
+          name: web-release
+          path: ./build/web
