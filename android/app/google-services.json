@@ -1,40 +1,40 @@
 {
   "project_info": {
-    "project_number": "110941769754",
-    "project_id": "server-status-7a338",
-    "storage_bucket": "server-status-7a338.appspot.com"
+    "project_number": "333617492020",
+    "project_id": "jopa-2-7ceee",
+    "storage_bucket": "jopa-2-7ceee.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:110941769754:android:b3a174d17950ddd16501a3",
+        "mobilesdk_app_id": "1:333617492020:android:0e34dc95bf0ee28e209a61",
         "android_client_info": {
           "package_name": "com.lim.server_status"
         }
       },
       "oauth_client": [
         {
-          "client_id": "110941769754-gqlnkj56jhpvhc1t90vk4kbq1cdo3u45.apps.googleusercontent.com",
+          "client_id": "333617492020-td1pfq2qrl0a9d7slejbonomiicbvhdc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCjJ-a1wMXHnxhCSoWwWgiSlCO5Thqw-uw"
+          "current_key": "AIzaSyBYZ1l_93KZ5Stnq4e-TQLVW6uFC5F1XfQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "110941769754-gqlnkj56jhpvhc1t90vk4kbq1cdo3u45.apps.googleusercontent.com",
+              "client_id": "333617492020-td1pfq2qrl0a9d7slejbonomiicbvhdc.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "110941769754-1km6f65gbqbh030n2ldb1pirh3qr73m5.apps.googleusercontent.com",
+              "client_id": "333617492020-6fv3c4341f36sitbe4o0e8a0vophpvih.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.lim.minecraftserverStatus"
+                "bundle_id": "com.lim.serverStatus"
               }
             }
           ]
