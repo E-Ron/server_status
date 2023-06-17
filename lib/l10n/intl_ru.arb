@@ -29,7 +29,7 @@
   "ok": "Применить",
   "serverStatus": "Статус сервера",
   "filter": "Фильтр",
-  "buildingListEmpty": "Список построек пуст.",
+  "buildingListEmpty": "Списоc построек пуст.",
   "buildingListError": "Не удалось получить\nсписок построек.",
   "buildingList": "Список построек"
 }
